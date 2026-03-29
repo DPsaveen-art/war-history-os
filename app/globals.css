@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-military-950: #0a0e0b;
+  --color-military-900: #121813;
+  --color-military-800: #1c241d;
+  --color-military-700: #29332a;
+  --color-military-600: #38463a;
+  --color-military-500: #495a4b;
+  --color-military-400: #627564;
+  
+  --color-alert-500: #eab308; /* Amber for maps and highlights */
+  --color-alert-600: #ca8a04;
+
+  --color-intel-500: #0ea5e9; /* Blue for intel/tech elements */
+  
+  --color-screen-bg: #070908;
+  --color-screen-surface: #101411;
+  --color-screen-border: #1e261f;
+
+  --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-sans: "Inter", "Segoe UI", "Roboto", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: var(--color-screen-bg);
+  --foreground: #e2e8f0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image: 
+    linear-gradient(rgba(30, 40, 30, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 40, 30, 0.5) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+}
+
+/* Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-screen-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-military-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-military-500);
+}

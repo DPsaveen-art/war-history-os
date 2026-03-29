@@ -1,0 +1,1 @@
+export { sampleWars } from "@/data/sampleWars";
